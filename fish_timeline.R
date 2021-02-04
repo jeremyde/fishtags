@@ -21,7 +21,7 @@ maxtime <- round(max(fish.data$Time),0)
 timestep <- 14 # x-axis tick every 2 weeks
 
 #a fish is considered to have left a location after this amount of time
-max.absence <- 1 #1 days
+max.absence <- 0.5 #12 hours
 
 #create tibble to store boxes that define when a fish visit begins and ends
 boxes <- tibble(
@@ -84,7 +84,7 @@ fish.plot
 dev.off()
 
 #save a pdf
-pdf(file="fishplot.pdf", width=12, height=10)
+pdf(file="fishplot.pdf", width=100, height=10)
 fish.plot
 dev.off()
 
